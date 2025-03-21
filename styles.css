@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    --accent-blue: #536DFE;
+    --darker-accent-bue: #3D5AFE;
+    --text-gray: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+hr {
+    width: 100%;
+}
+
+.handwriting {
+    font-family: "Playwrite NZ", cursive;
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-item {;
+    padding: 10px 15px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-gray);
+    border-bottom: 1px solid var(--accent-blue);
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #f0f2f5; /* Lighter blue on hover */
+}
+
+section {
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.hero {
+    margin-top: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100vh;
+
+}
+
+.hero-image {
+    height: 55%;
+    max-width: 300px; /* Maximum width */
+    /*height: auto;*/
+    border-radius: 20%;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.8));
+}
+
+.hero-text {
+    width: 70%;
+    /*padding-left: 0%;*/
+    text-align: left;
+}
+
+.hero-text p {
+    margin-left: 10px;
+    font-size: 20px;
+    color: var(--text-gray);
+    /*margin-top: 60px; !* Adjust as needed *!*/
+}
+
+.hero-title {
+    font-size: 100px; /* Adjust as needed */
+    width: 100%;
+    /*padding: 10px;*/
+    border-radius: 10px;
+    color: var(--accent-blue);
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        /*flex-direction: column;*/
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: fit-content;
+        max-width: 300px;
+        bottom: 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .hero-title {
+        font-size: 80px; /* Adjust font size for smaller screens */
+        margin-top: -20px; /* Adjust spacing if needed */
+    }
+
+    .hero-text p {
+        margin-top: 20px; /* Adjust spacing between title and paragraph */
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero-title {
+        font-size: 60px;
+    }
+
+}
+
+
+.scroll-down-button {
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    cursor: pointer;
+}
+
+.scroll-icon {
+    width: 50px;
+    filter: invert(37%) sepia(23%) saturate(3409%) hue-rotate(209deg) brightness(108%) contrast(99%);
+}
+
+.section-title {
+    font-size: 48px; /* Adjust as needed */
+    color: black;
+    z-index: 1;
+    text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.8); !* Background color with transparency *!*/
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.skill {
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+
+.skill-image {
+    width: 60px;
+    filter: grayscale(100%);
+}
+
+.skill-title {
+    font-size: 20px;
+}
+
+.skill-image:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+    filter: grayscale(0%);
+}
+
+.skill-title-hr{
+    width: 25px;
+    border: 1px solid var(--text-gray);
+}
+
+.accent {
+    color: var(--accent-blue);
+
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    max-width: 600px;
+}
+
+.project-description {
+    color: var(--text-gray);
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+    background-color: #f0f2f5; /* Light blue */
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    transition: opacity 0.3s;
+
+}
+
+.project-title {
+    bottom: 0;
+    width: 100%;
+    user-select: none;
+    user-focus: none;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.project-thumbnail {
+    max-width: 600px;
+    border: 1px groove var(--text-gray);
+}
+
+/*About me*/
+.about-me {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.about-me-text {
+    font-size: 20px;
+    color: var(--text-gray);
+    width: 60%;
+    margin: 20px auto;
+}
+
+.profile-image {
+    max-width: 300px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.8));
+    display: none;
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    /*bottom: 0;*/
+    height: 100%;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--text-gray);
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Space between items in mobile view */
+    }
+
+    .project-thumbnail {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 810px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 60px; /* Adjust as needed */
+        margin-top: -10px; /* Adjust as needed */
+    }
+
+    .hero-text p {
+        margin-top: 20px; /* Adjust as needed */
+    }
+
+    .skill {
+        width: 33%;
+    }
+
+    .skill-image {
+        max-width: 40px;
+    }
+    .profile-image {
+        display: inline;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 40px;
+    }
+}
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darker-accent-bue);
+}
+

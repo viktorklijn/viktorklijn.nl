@@ -1,0 +1,17 @@
+* {
+    --accent-blue: #536DFE;
+    --darker-accent-bue: #3D5AFE;
+    --text-gray: #666;
+}
+
+.handwriting {
+    font-family: "Playwrite NZ", cursive;
+}
+
+.color-accent-blue {
+    color: var(--accent-blue);
+}
+
+.color-darker-accent-blue {
+    color: var(--darker-accent-blue);
+}
